@@ -156,7 +156,7 @@ def load_data_bank_missing(file_path,columns):
 
 
 #Evaluate the decision Tree
-def evaluate_decision_tree(all_train, X_train_lables, y_train_lable,X_train,y_train,X_test,y_test, impurity_measures, max_depth_range):
+def evaluate_decision_tree(all_train, X_train_labels, y_train_lable,X_train,y_train,X_test,y_test, impurity_measures, max_depth_range):
    
     results_table = pd.DataFrame(columns=["Impurity Measure", "Depth", "Training Error (%)", "Test Error (%)"])
     
