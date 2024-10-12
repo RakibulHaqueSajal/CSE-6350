@@ -95,17 +95,11 @@ def id3(data, original_data, features, label, impurity_measure="entropy", max_de
 def predict_single(tree, instance):
     if not isinstance(tree, dict):
         return tree
-
-
     feature = next(iter(tree))  
-
     feature_value = instance[feature]
-
     if feature_value in tree[feature]:
-        
         return predict_single(tree[feature][feature_value], instance)
     else:
-      
         return tree['majority_class']
 
 # Function to predict for a dataset
