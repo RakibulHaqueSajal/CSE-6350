@@ -145,6 +145,7 @@ def load_data_bank(file_path,columns):
     feature_values=data.iloc[0: ,:-1]
     class_label_values=data.iloc[0:, -1]
     return data,features_labels,class_label,feature_values,class_label_values
+    
 #function to load the bank data with missing value median 
 def load_data_bank_missing(file_path,columns):
     data=pd.read_csv(file_path)
@@ -159,9 +160,8 @@ def load_data_bank_missing(file_path,columns):
     class_label_values=data.iloc[0:, -1]
     return data,features_labels,class_label,feature_values,class_label_values
 
-import numpy as np
-import pandas as pd
 
+#Evaluate the decision Tree
 def evaluate_decision_tree(all_train, X_train_lables, y_train_lable,X_train,y_train,X_test,y_test, impurity_measures, max_depth_range):
    
     results_table = pd.DataFrame(columns=["Impurity Measure", "Depth", "Training Error (%)", "Test Error (%)"])
