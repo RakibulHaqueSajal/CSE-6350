@@ -1,0 +1,2 @@
+Learned averaged weight vector: [-0.40142807 -0.24198765 -0.27494148 -0.13664723]
+Average prediction error on test dataset: 0.054
